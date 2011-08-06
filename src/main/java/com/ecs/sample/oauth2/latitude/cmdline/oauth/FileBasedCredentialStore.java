@@ -11,7 +11,7 @@ import com.google.api.client.auth.oauth2.draft10.AccessTokenResponse;
 
 public class FileBasedCredentialStore implements CredentialStore {
 
-	private static final String fileLocation = "c:/temp/latitude-accesstoken";
+	private static final String fileLocation = System.getProperty("java.io.tmpdir") + "/latitude-accesstoken";
 
 	@Override
 	public AccessTokenResponse read() {
